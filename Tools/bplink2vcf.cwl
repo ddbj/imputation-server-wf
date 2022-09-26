@@ -23,8 +23,6 @@ inputs:
     secondaryFiles:
       - ^.bim
       - ^.fam
-      - ^.log
-      - ^.nosex
   # - id: in_bim
   #   type: File
   # - id: in_fam
