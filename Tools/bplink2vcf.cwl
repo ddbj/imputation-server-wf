@@ -34,13 +34,16 @@ inputs:
   - id: out_name
     type: string
 outputs:
-  - id: all-for-debugging
-    type:
-      type: array
-      items: [File, Directory]
+  - id: out_vcf
+    type: File
     outputBinding:
-      glob: "*"
-#  - id: out
-#    type: Any
-#    outputBinding:
-#      glob: "$(inputs.out_name)"
+      glob: "$(inputs.out_name).vcf"
+  - id: out_map
+    type: File
+    outputBinding:
+      glob: "$(inputs.out_name).map"
+  - id: out_ped
+    type: File
+    outputBinding:
+      glob: "$(inputs.out_name).ped"
+      
