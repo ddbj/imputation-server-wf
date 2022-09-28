@@ -16,21 +16,11 @@ arguments:
   - --biallelic-only
   - --keep-allele-order
 inputs:
-  # - id: bfile
-  #   type: string
   - id: in_bed
     type: File
     secondaryFiles:
       - ^.bim
       - ^.fam
-  # - id: in_bim
-  #   type: File
-  # - id: in_fam
-  #   type: File
-  # - id: in_log
-  #   type: File
-  # - id: in_nosex
-  #   type: File
   - id: out_name
     type: string
 outputs:
@@ -46,4 +36,3 @@ outputs:
     type: File
     outputBinding:
       glob: "$(inputs.out_name).ped"
-      
