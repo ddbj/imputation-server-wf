@@ -16,31 +16,15 @@ arguments:
   - --biallelic-only
   - --keep-allele-order
 inputs:
-  # - id: file
-  #   type: string
   - id: in_bed
     type: File
     secondaryFiles:
       - ^.ped
       - ^.map
-  # - id: in_bim
-  #   type: File
-  # - id: in_fam
-  #   type: File
-  # - id: in_log
-  #   type: File
-  # - id: in_nosex
-  #   type: File
   - id: out_name
     type: string
 outputs:
-  - id: all-for-debugging
-    type:
-      type: array
-      items: [File, Directory]
+  - id: out_vcf
+    type: File
     outputBinding:
-      glob: "*"
-#  - id: out
-#    type: Any
-#    outputBinding:
-#      glob: "$(inputs.out_name)"
+      glob: "$(inputs.out_name).vcf"
